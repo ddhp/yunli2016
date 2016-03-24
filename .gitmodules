@@ -1,0 +1,6 @@
+[submodule "client/scripts/webpack-async-router"]
+	path = client/scripts/webpack-async-router
+	url = git@github.com:KKTV/webpack-async-router.git
+[submodule "client/styles/bootstrap"]
+	path = client/styles/bootstrap
+	url = https://github.com/twbs/bootstrap.git

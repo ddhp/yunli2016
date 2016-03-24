@@ -1,0 +1,50 @@
+$bootstrap-path:        "client/styles/bootstrap/scss/" !default;
+// $fa-path:        "fontawesome/scss/" !default;
+/*!
+ * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "_variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// Reset and dependencies
+@import "bootstrap/scss/normalize";
+@import "bootstrap/scss/print";
+
+// Core CSS
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+
+// BS Components
+// @import "bootstrap/scss/animation";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/input-group";
+@import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+
+// Potential JS Components
+// @import "bootstrap/scss/carousel";
+
+// Utility classes
+@import "bootstrap/scss/utilities";
+
+// Fontawesome
+// @import "fontawesome/scss/font-awesome";
+
+// App style
+// @import "_mixins";
+@import "_custom";
+
+// Page specific styles

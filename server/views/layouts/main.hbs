@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+    {{> title pageTitle}}
+    {{> kktvHeader}}
+    
+  </head>
+  <body>
+
+    {{! pass json stringified data to client for react }}
+    {{> scriptTagForData data=KKTV_DATA}}
+
+    {{> nav}}
+
+    <div class="container container-margin">
+      {{{body}}}
+    </div>
+
+    {{> footer}}
+
+    {{> entryScript}}
+
+  </body>
+</html>
