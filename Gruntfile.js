@@ -162,34 +162,11 @@ module.exports = function (grunt) {
           {
             expand: true,
             cwd: '<%= dirs.client.src %>/images/',
-            src: ['*'],
+            src: ['**/*'],
             dest: '<%= dirs.client.dest %>/images'
           }
         ]
       },
-      yapi: {
-        files: [
-          {
-            expand: true,
-            flatten: true,
-            cwd: '<%= dirs.client.src %>/scripts/yapi.js/dist',
-            src: ['yapi.min.js'],
-            dest: '<%= dirs.client.dest %>/js'
-          },
-          {
-            expand: true,
-            cwd: '<%= dirs.client.src %>/scripts/yapi.js/dist/ui',
-            src: ['default-ui.min.css'],
-            dest: '<%= dirs.client.dest %>/css'
-          },
-          {
-            expand: true,
-            cwd: '<%= dirs.client.src %>/scripts/yapi.js/dist/ui/images',
-            src: ['*'],
-            dest: '<%= dirs.client.dest %>/images'
-          }
-        ]
-      }
     },
 
     // server side test cases
