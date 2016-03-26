@@ -83,7 +83,6 @@ module.exports = function (grunt) {
           'GruntFile.js', 
           '<%= dirs.server.src %>/**/*.js',
           '<%= dirs.client.src %>/scripts/*.js',
-          '!<%= dirs.client.src %>/scripts/yapi.js', // ignore yapi.js/
           '<%= dirs.client.src %>/scripts/components/*.js',
           '<%= dirs.client.src %>/scripts/controllers/*.js',
         ]
@@ -302,7 +301,6 @@ module.exports = function (grunt) {
     'clean',
     'jshint',
     'copy:images',
-    'copy:yapi',
     'style',
     'run:webpack'
   ]);
@@ -318,7 +316,6 @@ module.exports = function (grunt) {
     'clean',
     'jshint',
     'copy:images',
-    'copy:yapi',
     'style-min',
     'run:webpack-min'
   ]);
