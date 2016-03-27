@@ -54,6 +54,8 @@
   .project-detail__content {
     .desc {
       position: fixed;
+      width: 45%;
+      pointer-events: none;
     }
   }
 
@@ -68,4 +70,12 @@
     right: 6px;
   }
   
+}
+
+.about {
+  position: fixed;
+  left: 130px;
+  width: 45%;
+  top: 30px;
+  bottom: 0;
 }

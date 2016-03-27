@@ -8,6 +8,7 @@
  */
 function requireCtrls(app) {
   require('./projects')(app);
+  require('./about')(app);
   require('./home')(app);
   // require root last
   require('./root')(app);
