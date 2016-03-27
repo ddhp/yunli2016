@@ -19,24 +19,29 @@
   setDescPaddingTop();
 
   // change showing detail
-
   var projectNavs = Array.prototype.slice.call(document.querySelectorAll('.nav--projects a'));
-  projectNavs.map(function(nav) {
-    nav.addEventListener('click', function(e) {
 
-      // hide every children
-      var projectDetails = Array.prototype.slice.call(projectDetailContentDOM.children);
-      projectDetails.map(function(detail) {
-        if (!(/hide/.test(detail.className))) {
-          detail.className += ' hide';
-        }
-      });
-
-      var c = '.' + this.getAttribute('data-id');
-      var targetDOM = projectDetailContentDOM.querySelector(c);
-      targetDOM.className = targetDOM.className.replace(/\s?hide/, '');
-      setDescPaddingTop(targetDOM);
+  function switchTab() {
+    // hide every children
+    var projectDetails = Array.prototype.slice.call(projectDetailContentDOM.children);
+    projectDetails.map(function(detail) {
+      if (!(/hide/.test(detail.className))) {
+        detail.className += ' hide';
+      }
     });
+
+    var c = '.' + this.getAttribute('data-id');
+    var targetDOM = projectDetailContentDOM.querySelector(c);
+    targetDOM.className = targetDOM.className.replace(/\s?hide/, '');
+    setDescPaddingTop(targetDOM);
+  }
+
+  // add click listener to all projects nav
+  projectNavs.map(function(nav) {
+    nav.addEventListener('click', switchTab);
   });
+
+  // call switchTab with oiseaux project-nav as "this"
+  switchTab.call(document.querySelector('a[data-id="oiseaux"]'));
 
 }());
