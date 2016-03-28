@@ -20,6 +20,7 @@
 
   // change showing detail
   var projectNavs = Array.prototype.slice.call(document.querySelectorAll('.nav--projects a'));
+  var currentActiveDOM;
 
   function switchTab() {
     // hide every children
@@ -32,7 +33,11 @@
 
     var c = '.' + this.getAttribute('data-id');
     var targetDOM = projectDetailContentDOM.querySelector(c);
+    var closeIcon = document.querySelector('#project-close-icon');
+    currentActiveDOM = targetDOM;
     targetDOM.className = targetDOM.className.replace(/\s?hide/, '');
+    // show close icon
+    closeIcon.className = closeIcon.className.replace(/\s?hide/, '');
     setDescPaddingTop(targetDOM);
   }
 
@@ -43,5 +48,16 @@
 
   // call switchTab with oiseaux project-nav as "this"
   switchTab.call(document.querySelector('a[data-id="oiseaux"]'));
+
+  // close icon behavior
+  var closeIcon = document.querySelector('#project-close-icon');
+  closeIcon.addEventListener('click', function() {
+    if (currentActiveDOM.className.indexOf('hide') === -1) {
+      currentActiveDOM.className += ' hide';
+    }
+    if (this.className.indexOf('hide') === -1) {
+      this.className += ' hide';
+    }
+  });
 
 }());

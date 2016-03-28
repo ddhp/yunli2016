@@ -41,7 +41,7 @@ $bootstrap-path:        "client/styles/bootstrap/scss/" !default;
 @import "bootstrap/scss/utilities";
 
 // Fontawesome
-// @import "fontawesome/scss/font-awesome";
+@import "fontawesome/scss/font-awesome";
 
 // App style
 // @import "_mixins";

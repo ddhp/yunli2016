@@ -4,3 +4,6 @@
 [submodule "client/styles/bootstrap"]
 	path = client/styles/bootstrap
 	url = https://github.com/twbs/bootstrap.git
+[submodule "client/styles/fontawesome"]
+	path = client/styles/fontawesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
