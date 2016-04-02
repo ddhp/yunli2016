@@ -14,10 +14,10 @@
   }
   
   /**
-   * when screen less then 1175
+   * when screen less then 1205
    *
    */
-  if (clientWidth < 1175) {
+  if (clientWidth < 1205) {
     // var navDOMWidth = document.querySelector('.nav');
     // var navProjectsDOM = document.querySelector('.nav--projects');
     var navDOMWidth = 87.5;
@@ -31,7 +31,7 @@
     setDescPaddingTop();
   }
 
-  // end screen less then 1175
+  // end screen less then 1205
   
 
   // change showing detail
@@ -55,7 +55,7 @@
     // show close icon
     closeIcon.className = closeIcon.className.replace(/\s?hide/, '');
     var clientWidth = document.body.clientWidth;
-    if (clientWidth < 1175) {
+    if (clientWidth < 1205) {
       setDescPaddingTop(targetDOM);
     }
   }
@@ -78,5 +78,14 @@
       this.className += ' hide';
     }
   });
+
+  // apply portrait img style
+  var portraits = Array.prototype.slice.call(document.querySelectorAll('.portrait'));
+  portraits.map(function(portrait) {
+    portrait.style.width = 'auto';
+    portrait.style.height = projectDetailContentDOM.clientWidth + 'px';
+  });
+
+
 
 }());

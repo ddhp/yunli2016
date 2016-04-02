@@ -1,5 +1,5 @@
 body {
-  font-size: .9rem;
+  font-size: .75rem;
 }
 
 .fade {
@@ -51,19 +51,23 @@ body {
 .project-detail {
   position: fixed;
   left: 382.5px;
-  width: 557.5px;
+  width: 587.5px;
   top: 30px;
   bottom: 0;
 
   .project-detail__content {
+    @media (min-width: 1205px) {
+      width: 557.5px;
+    }
+
     .desc {
       position: fixed;
       width: 45%;
       pointer-events: none;
 
-      // for more than 1175
-      @media (min-width: 1175px) {
-        left: 940px;
+      // for more than 1205
+      @media (min-width: 1205px) {
+        left: 970px;
         width: 205px;
         top: 70px;
       }
@@ -82,12 +86,12 @@ body {
     height: 24px;
     // opacity: 0.3;
 
-    // for more than 1175
-    @media (min-width: 1175px) {
+    // for more than 1205
+    @media (min-width: 1205px) {
       right: -20px;
     }
 
-    @media (max-width: 1174px) {
+    @media (max-width: 1204px) {
       right: 34px;
     }
   }
