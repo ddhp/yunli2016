@@ -47,7 +47,7 @@
   });
 
   // call switchTab with oiseaux project-nav as "this"
-  switchTab.call(document.querySelector('a[data-id="oiseaux"]'));
+  // switchTab.call(document.querySelector('a[data-id="oiseaux"]'));
 
   // close icon behavior
   var closeIcon = document.querySelector('#project-close-icon');
