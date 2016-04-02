@@ -5,10 +5,6 @@
 
   var projectDetailDOM = document.querySelector('.project-detail');
   var projectDetailContentDOM = document.querySelector('.project-detail__content');
-  // total width - left margin - nav width - project nav width
-  var width = clientWidth - 30 - 100 - 230;
-  projectDetailDOM.style.width = width + 'px';
-  projectDetailContentDOM.style.width = (width - 30) + 'px';
 
   // set .project-detail .images padding: .desc clientHeight + 30px padding
   function setDescPaddingTop(targetDOM) {
@@ -16,7 +12,27 @@
     var paddingTop = t.querySelector('.desc').clientHeight + 30;
     t.querySelector('.images').style['padding-top'] = paddingTop + 'px';
   }
-  setDescPaddingTop();
+  
+  /**
+   * when screen less then 1175
+   *
+   */
+  if (clientWidth < 1175) {
+    // var navDOMWidth = document.querySelector('.nav');
+    // var navProjectsDOM = document.querySelector('.nav--projects');
+    var navDOMWidth = 87.5;
+    var navProjectsDOMWidth = 205;
+    var restWidth = 30 + navDOMWidth + 30 + navProjectsDOMWidth + 30;
+    // total width - left margin - nav width - project nav width
+    var width = clientWidth - restWidth;
+    projectDetailDOM.style.width = width + 'px';
+    projectDetailContentDOM.style.width = (width - 30) + 'px';
+
+    setDescPaddingTop();
+  }
+
+  // end screen less then 1175
+  
 
   // change showing detail
   var projectNavs = Array.prototype.slice.call(document.querySelectorAll('.nav--projects a'));
@@ -38,7 +54,10 @@
     targetDOM.className = targetDOM.className.replace(/\s?hide/, '');
     // show close icon
     closeIcon.className = closeIcon.className.replace(/\s?hide/, '');
-    setDescPaddingTop(targetDOM);
+    var clientWidth = document.body.clientWidth;
+    if (clientWidth < 1175) {
+      setDescPaddingTop(targetDOM);
+    }
   }
 
   // add click listener to all projects nav
