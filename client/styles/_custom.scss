@@ -2,7 +2,7 @@ body {
   font-size: .85rem;
   line-height: 1.4;
   letter-spacing: .5px;
-  font-weight: bold;
+  color: #090909;
 }
 
 .fade {
@@ -72,7 +72,7 @@ body {
       @media (min-width: 1205px) {
         left: 970px;
         width: 205px;
-        top: 70px;
+        top: 60px;
       }
     }
   }
@@ -83,18 +83,15 @@ body {
   }
 
   .close-icon {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     // background: url('/assets/images/cross.png') no-repeat;
     position: absolute;
     top: 0px;
-    width: 24px;
-    height: 24px;
-    // opacity: 0.3;
 
     // for more than 1205
     @media (min-width: 1205px) {
-      right: -24px;
+      right: -18px;
     }
 
     @media (max-width: 1204px) {
@@ -145,7 +142,7 @@ body {
 .about {
   position: fixed;
   left: 130px;
-  width: 557.5px;
+  width: 322.5px;
   top: 30px;
   bottom: 0;
 }
